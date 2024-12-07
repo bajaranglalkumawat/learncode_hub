@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure of programming.com</title>
+    <style>
+       
+        /* General reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif; 
+            
+            
+        }  
+     
+/* Header  */   
+        header {
+        background-color: #050404;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Logo and Web Name Animation */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            animation: moveLeftToRight 10s linear infinite;
+        }
+
+        /* Keyframe for left to right animation */
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .logo {
+            width: 170px;
+            height: 150;
+            margin-right: 10px;
+        }
+
+        .website-name {
+            font-size: 30px;
+            color: #fff;
+            font-weight: bold; 
+          
+        }
+
+       
+        .list ol {
+            padding-left: 20px;
+            list-style: decimal; 
+              
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #e4dede;
+            text-transform: uppercase; 
+            background-color: #0b0a0a;
+        }
+
+        .list li {
+            padding: 5px;
+            margin: 5px 0;
+           
+           
+            font-size: 1.1rem;
+          
+              
+        }
+
+       
+        .list li{
+            background-color: #080505;
+        }
+        .list li:active{
+            background-color: #f0e3e3;
+        }
+           .list h5{
+           
+           
+            width: 300px;
+            border: 3px solid #f1edea;
+            font-size: x-large;  
+             text-align: center;
+            
+           
+          
+        
+} 
+        /* Hover Effect for List Items */
+        .list li:hover {
+            background-color: #f7040c;
+            transform: scale(1.05);
+        }
+
+        /* Bottom Section for Gmail and Number with Hover Effects */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #2e0707;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #120401; /* Change color on hover */
+        }
+
+        /* Summary Section */
+        .summary {
+            background-color: rgba(240, 236, 236, 0.93);
+            padding: 100px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden; 
+            background-image: url(12.jpg);  
+        }
+
+        .summary h2 {
+            font-size: 24px;
+            color: #ded4d4;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .summary p {
+            font-size: 18px;
+            color: #f4eeee;
+            z-index: 2;
+        }
+
+        /* 3D Moving Background Image */
+        .summary::before {
+            content: '';
+            position: absolute;
+          top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           
+            background-position: center;
+            filter: brightness();
+            z-index: 1;
+            animation: moveBackground 30s linear infinite;
+
+        }  
+        .summary:hover {
+            background-color: #c84515;
+            transform: scale(1.07);
+        }
+
+
+      
+        
+
+        /* Navigation Links */
+        .nav-links {
+            text-align: center;
+            margin-top: 0px; 
+        border-color: #6c0b0b; 
+        background-color: #070606;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #f2ebf0;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s; 
+           
+        } 
+       
+
+        .nav-links a:hover {
+            color: #faf6fb; /* Change color on hover */ 
+            background-color: #9c4242;
+        }
+
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px; 
+            background-image: url(12.jpg);
+        }
+
+        .video-item {
+            width: 300px;
+            text-align: center;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(236, 234, 234, 0.951);
+        } 
+       
+
+        
+
+        .video-item h5 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #f1eeee;
+        }
+  .img{ 
+      margin-right: 100%;
+  }  
+  .v{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh; /* Full viewport height */
+    background-color: #040404; /* Set desired background color */ 
+     padding-top: 5%; 
+     margin-top: -5%; 
+      padding-bottom: 5%; 
+       margin-bottom: -5%;
+}
+
+iframe {
+    width: 80%; /* Adjust the width of the video */
+    height: 90%; /* Adjust the height of the video */
+    border: none; /* Optional: Remove border around iframe */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for aesthetics */ 
+      color: #e4dede;
+} 
+.i{ 
+    color: #e4dede;  
+    text-align: center; 
+      font-size: larger; 
+      background-color: #010101; 
+       padding-bottom: 5%; 
+        margin-bottom: -5%;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header> 
+       
+          
+        <div class="logo-container">
+            <img src="logo11.png" alt="Website Logo" class="logo">
+            <div class="website-name"></div>
+        </div>   
+    </header> 
+    
+    <!--  Links -->
+    <div class="nav-links">
+        <a href="tutorial.html">Home</a>
+        <a href="aboutt.html">About</a>
+        <a href="FORM.html">Create Account</a>
+        <a href="Generate certificate.html">generate Certificate</a>
+        <a href="download.html">download notes</a>
+        <a href="Questions.html">Question</a> 
+       
+    </div>  
+    <br> 
+    <div class="v"> 
+        <iframe src="hello.mp4" title="Video 1" allowfullscreen></iframe> 
+    
+      </div>    
+      <div class="i"> 
+        <h5> Introduction By Nova  </h5>
+     </div>
+
+    
+    <!-- List  -->
+    <div class="list">
+        <ol>
+            <h5>List of Content:</h5>
+            <li>1. Java Programming</li>
+            <li>2. JavaScript Programming</li>
+            <li>3. Machine Learning Programming</li>
+            <li>4. Node.js Programming</li>
+            <li>5. React.js Programming</li>
+            <li>6. Data Structures Programming</li>
+            <li>7. SQL Programming</li>
+            <li>8. HTML, CSS Programming</li>
+            <li>9. Python Programming</li>
+            <li>10. C Programming</li>
+            <li>11. C++ Programming</li>
+            <li>12. GSoC Roadmap</li> 
+            
+        </ol> 
+      
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <h2>Welcome to Treasure of Programming</h2>
+        <p>We aim to make programming learning accessible, engaging, and effective for all skill levels. Whether you're just starting out or an expert, we have resources to help you reach your goals. Dive into our content and explore various programming languages and technologies!</p>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/sPM2WiwA1us" title="Video 1" allowfullscreen></iframe>
+            <h5>GSoC 2025 Roadmap</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/UmnCZ7-9yDY" title="Video 2" allowfullscreen></iframe>
+            <h5>Java Complete Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/e7sAf4SbS_g" title="Video 3" allowfullscreen></iframe>
+            <h5>C++ Complete Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/k2DSi1zGEc8" title="Video 4" allowfullscreen></iframe>
+            <h5>HTML Complete Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/rklidcZ-aLU" title="Video 5" allowfullscreen></iframe>
+            <h5>HTML Course with Project</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/UrsmFxEIp5k" title="Video 6" allowfullscreen></iframe>
+            <h5>Python Complete Course with Project</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/VlPiVmYuoqw" title="Video 7" allowfullscreen></iframe>
+            <h5>JavaScript Complete Course with Project</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" title="Video 8" allowfullscreen></iframe>
+            <h5>Machine Learning Crash Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/TlB_eWDSMt4" title="Video 9" allowfullscreen></iframe>
+            <h5>Node.js Crash Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/8hly31xKli0" title="Video 10" allowfullscreen></iframe>
+            <h5>Data Structures Crash Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/w7ejDZ8SWv8" title="Video 11" allowfullscreen></iframe>
+            <h5>React.js Course</h5>
+        </div>
+    
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" title="Video 12" allowfullscreen></iframe>
+            <h5>SQL Course</h5>
+        </div>
+    </div>
+
+    <!-- Contact  Section  -->
+    <div class="contact-info">
+        <a href="mailto:example@gmail.com">Email: example@gmail.com</a>
+        <a href="tel:+123456789">Phone: +123456789</a>
+    </div>
+
+</body>
+</html>  
+
+2. code of wev  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #FF6F61, #D4A5A5);
+            height: 100%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Main Container */
+        .hello {
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Paragraph Styling */
+        .hello p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Hover Effect on Paragraph */
+        .hello p:hover {
+            transform: scale(1.05);
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            .hello {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .hello p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hello">
+        <h1>Welcome to Education.com</h1>
+        <p>
+            This webpage serves as a coding resource, particularly for learners who prefer video tutorials. By using YouTube embeds, it curates a set of valuable educational content on various programming languages and frameworks. The design is minimalistic yet functional, with interactive features like a search bar and dynamic logo.
+        </p>
+        <p>
+            1. Header and Logo
+            The page starts with a header that contains a logo. The logo is displayed at the center, and it enlarges slightly when hovered over, giving a dynamic effect. The logo is linked to the homepage (although the URL is set to "index.html" for local use).
+            <br>
+            2. Navigation Section
+            Below the header, a styled navigation area provides links for: Home, About, Create Account. These links are enclosed in a div with a background color, text alignment, and specific font styling. They guide users through the website's main sections. 
+            <br>
+            3. Introductory Text
+            The webpage contains an introductory paragraph describing the website’s mission, which is to make learning accessible and engaging. The text is designed to be easy to read with specific font and background styling to make it stand out.
+            <br>
+            4. Search Bar
+            A search bar is included in the layout to help users find relevant content quickly. It is styled with a clean input field and a button, both of which have hover effects to improve interactivity.
+            <br>
+            5. Embedded YouTube Videos
+            The page features a collection of YouTube videos related to coding tutorials. These videos cover topics such as Python, JavaScript, HTML, CSS, C++, React, and more, making it a useful resource for learners at various stages. Each video is embedded using an iframe, which displays the video directly on the page. Below each video, a brief description (e.g., "HTML Complete Course," "Python Full Course") is provided to explain the content.
+            <br>
+            6. CSS Styling
+            The design uses modern CSS techniques:
+            Flexbox for responsive layouts, ensuring elements adjust to different screen sizes.
+            Hover effects for interactive elements like the logo and buttons.
+            A consistent color scheme and styling to create an appealing user interface. 
+            <br>
+            7. Responsiveness and Layout
+            Although the code currently uses fixed values for most styling (e.g., fixed width for videos), the use of Flexbox hints at future scalability. The layout will adjust flexibly when more videos or content are added. 
+        </p>
+    </div>
+</body>
+</html>
+
+
+  3. code  
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Title Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Slide-in Animation for Heading */						
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: left;
+            width: 100%;
+            color: #555;
+        }
+
+        /* Input Styling */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+            outline: none;
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.6);
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6a11cb;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2575fc;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        /* Placeholder Styling */
+        input::placeholder {
+            color: #888;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-wrapper {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+
+        /* Hover Effect on Form Fields */
+        input:hover, button:hover {
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+            border-color: #6a11cb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Create a New Account</h2>
+            <form action="submit-account.php" method="POST" class="form-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+ 4. code of web 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2b0606;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: block;
+        }
+
+        .certificate-container {
+            position: relative;
+            width: 850px;
+            height: 650px;
+            background: url('9898.jpg') no-repeat center center / cover;
+            border-radius: 15px;
+            border: 10px solid #4e54c8;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .certificate-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: hsl(0, 50%, 1%);
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        } 
+
+        .certificate-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase; 
+            color: rgb(86, 59, 112); 
+            text-align: left;  
+            padding-right: 250px; 
+            margin-right: 250px;
+        }
+
+        .certificate-content h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            font-weight: bold; 
+            padding-right: 250px; 
+            margin-right: 250px;
+        }
+
+        .certificate-content p {
+            font-size: 20px;
+            margin: 8px 0;
+            line-height: 1.5; 
+            padding-right: 250px; 
+            margin-right: 250px;
+        }
+
+        .certificate-content .highlight {
+            color: #a07927;
+        } 
+        .certificate-container h3{ 
+             color: #a17413;
+        }
+
+        .input-form {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-form input, .input-form select {
+            padding: 10px;
+            font-size: 18px;
+            margin: 10px 0;
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .input-form button {
+            padding: 12px 25px;
+            background-color: #f7b731;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .input-form button:hover {
+            background-color: #342307;
+        }
+
+        .download-btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #f7b731;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #401212;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #342307;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-form">
+        <h2>Enter Your Details</h2>
+        <label for="course">Course Name:</label>
+        <input type="text" id="course" placeholder="Enter Course Name" />
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Your Email" />
+
+        <label for="institute">Institute:</label>
+        <input type="text" id="institute" placeholder="Enter Institute Name" />
+
+        <button onclick="generateCertificate()">Generate Certificate</button>
+    </div>
+
+    <div class="certificate-container" id="certificate" style="display: none;">
+        <div class="certificate-content">
+            <h1>Learncode Hub </h1>
+            <h2>Certificate of Achievement</h2>
+            <p><strong>Course:</strong> <span id="courseOutput" class="highlight">JavaScript Basics</span></p>
+            <p><strong>Name:</strong> <span id="nameOutput" class="highlight">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="emailOutput">johndoe@example.com</span></p>
+            <p><strong>Institute:</strong> <span id="instituteOutput">Programming Academy</span></p>
+            <h3>Congratulations on successfully completing the course with distinction! This certificate acknowledges your dedication and achievement.</h3>
+        </div>
+    </div>
+    
+    <button class="download-btn" onclick="downloadCertificate()" style="display: none;" id="downloadBtn">Download Certificate</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script>
+        function generateCertificate() {
+            // Get values from input fields
+            const course = document.getElementById('course').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const institute = document.getElementById('institute').value;
+
+            // Display the certificate and fill in the details
+            document.getElementById('certificate').style.display = 'block';
+            document.getElementById('downloadBtn').style.display = 'block';
+
+            document.getElementById('courseOutput').innerText = course;
+            document.getElementById('nameOutput').innerText = name;
+            document.getElementById('emailOutput').innerText = email;
+            document.getElementById('instituteOutput').innerText = institute;
+        }
+        function downloadCertificate() {
+    const certificate = document.getElementById('certificate');
+
+    // Remove background temporarily
+    const originalBackground = certificate.style.background;
+    certificate.style.background = "#401212";
+
+    html2canvas(certificate, { scale: 2 }).then(canvas => {
+        // Restore the background
+        certificate.style.background = originalBackground;
+
+        const { jsPDF } = jspdf;
+        const pdf = new jsPDF('landscape', 'px', [1123, 794]); // A4 size in landscape
+        const imgData = canvas.toDataURL('image/png'); // Convert canvas to image
+        pdf.addImage(imgData, 'PNG', 0, 0, 1123, 794); // Add the image to PDF
+        pdf.save('certificate.pdf'); // Save the PDF
+    });
+}
+
+    </script>
+</body>
+</html>
+
+ 
